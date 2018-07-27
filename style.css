@@ -1,7 +1,5 @@
 /*************************** CSS CUSTOM VARIABLES SCSS********************************/
-:root{
-	--primarycolor:red;
-}
+
 /*************************** DEFAULTS ***************************/
 body{
 	margin: 0;
@@ -9,7 +7,6 @@ body{
 	font-size: 16px;
 	line-height: 1.5;
 	font-family: sans-serif;
-    color: red;
 }
 *,*::before,*::after{
 	box-sizing: border-box;
@@ -28,12 +25,21 @@ img{
 .scene{
     flex-basis: 80%;
     background: yellow;
+    position: relative;
 }
 .controls{
     flex-basis:20%;
     background: blue;
 }
-
+.object{
+  width: 10%;
+  height: 30%;
+  background: var(--basecolor);
+  position: absolute;
+  bottom: 5%;
+  left: var(--distance);
+  filter: blur(var(--blur));
+}
 
 
 
