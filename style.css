@@ -1,6 +1,6 @@
 /*************************** CSS CUSTOM VARIABLES SCSS********************************/
 :root{
-  --basecolor :#0000ff;
+  --basecolor :#7544d5;
   --distance : 5%;
   --blur : 0px;
 }
@@ -28,188 +28,55 @@ img{
 }
 .scene{
     flex-basis: 80%;
-    background: yellow;
+    background: var(--basecolor);
     position: relative;
 }
 .controls{
     flex-basis:20%;
-    background: blue;
+    background:#020203;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0% 7%;
 }
 .object{
-  background: var(--basecolor);
+  background: transparent;
   position: absolute;
   bottom: 5%;
   left: var(--distance);
   filter: blur(var(--blur));
-  width: 20vw;
-  height: 20vw;
+  width: 15%;
+  height: 30%;
   overflow: hidden;
+  display: flex;
 }
 
-/*************** Monster *******************/
+/*************** Ghost *******************/
 .container {
   position: absolute;
-  margin: auto;
-  top: 0;
-  left: 6%;
-  bottom: 9%;
-  right: 0;
   width: 100%;
-  height: 100%;
-  transform: scale(0.8);
+  height: auto;
+  margin: auto;
 }
-
-.horn {
-  position: absolute;
-  top: 3px;
-  left: 28px;
-  width: 20px;
-  height: 30px;
-  background: #D8E0CD;
-  border-radius: 30% 240% 100% 100%;
+.shadowFrame {
+  width: 130px;
+  margin-top: 15px;
 }
-
-.horn.right {
-  border-radius: 240% 30% 100% 100%;
-  left: 100px;
+.shadow {
+  transform-origin: center center;
 }
-
-.head {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background: #AED137;
-  border-radius: 100%;
+.shadow ellipse {
+  transform-origin: center center;
 }
-
-.head:before {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: 33px;
-  background: #AED137;
-  width: 120px;
-  height: 120px;
-  border-radius: 100%;
+/**************************/
+input{
+  display: block;
 }
-
-.head:after {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: -2px;
-  background: #AED137;
-  width: 120px;
-  height: 120px;
-  border-radius: 100%;
+label{
+  display: block;
 }
-
-.eye {
-  z-index: 2;
-  position: absolute;
-  top: 24px;
-  left: 33px;
-  background: #FFF;
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
-}
-
-.iris {
-  position: absolute;
-  top: 9px;
-  left: 9px;
-  width: 60px;
-  height: 60px;
-  background: #199E6C;
-  border-radius: 100%;
-}
-
-.iris:before {
-  content: '';
-  position: absolute;
-  left: 45px;
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-left: 20px solid #FFF;
-  border-bottom: 10px solid transparent;
-}
-
-.mouth {
-  position: absolute;
-  top: 100px;
-  left: 60px;
-  width: 30px;
-  height: 30px;
-  background: #176A46;
-  border-radius: 100%;
-}
-
-.mouth:after {
-  z-index: 0;
-  content: '';
-  position: absolute;
-  top: -10px;
-  background: #AED137;
-  width: 30px;
-  height: 30px;
-}
-
-.hand {
-  position: absolute;
-  top: 20px;
-  left: -10px;
-  width: 20px;
-  height: 100px;
-  background: #AED137;
-  border-radius: 10px;
-  transform: rotate(140deg);
-}
-
-.hand.right {
-  transform: rotate(40deg);
-  top: 20px;
-  left: 140px;
-}
-
-.leg {
-  position: absolute;
-  top: 140px;
-  left: 43px;
-  width: 20px;
-  height: 60px;
-  background: #AED137;
-}
-
-.leg:before {
-  content: '';
-  position: absolute;
-  top: 50px;
-  left: -5px;
-  width: 30px;
-  height: 20px;
-  border-radius: 200% 200% 100% 100%;
-  background: #AED137;
-}
-
-.nail {
-  position: absolute;
-  top: 64px;
-  width: 5px;
-  height: 5px;
-  background: #FFF;
-  border-radius: 10px;
-}
-
-.nail.one {
-  left: 8px;
-}
-
-.nail.two {
-  left: 16px;
-}
-
-.leg.two {
-  left: 85px;
+.controls div{
+  flex-grow: 1;
 }
