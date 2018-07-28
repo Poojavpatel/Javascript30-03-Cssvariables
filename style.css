@@ -10,7 +10,8 @@ body{
 	padding: 0;
 	font-size: 16px;
 	line-height: 1.5;
-	font-family: sans-serif;
+  font-family: sans-serif;
+  background: #020203;
 }
 *,*::before,*::after{
 	box-sizing: border-box;
@@ -112,3 +113,69 @@ input[type=color]{
     padding: 0;
 }
 
+/************** Responsive *******************/
+@media screen and (max-width:760px){
+    .object{
+      width: 20%;
+    }
+}
+@media screen and (max-width:600px){
+  .object{
+    width: 20%;
+  }
+  .scene{
+    flex-basis: 60%;
+  }
+  .controls{
+    flex-basis: 40%;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:520px) and (min-width:371px){
+  .scene{
+    flex-basis: 60%;
+  }
+  .controls{
+    flex-basis: 40%;
+    flex-direction: column;
+  }
+  .container{
+    transform: scale(0.8);
+  }
+  .controls div:not(:last-child){
+    width: 100%;
+    padding: 4% 5%;
+  }
+  input[type=range]{
+    padding: 4% 0%;
+  }
+  .controls div:last-child{
+    margin: 4% 5%;
+    width: 100%;
+    padding: 0% 5%;
+  }
+}
+@media screen and (max-width:370px){
+  .container{
+    transform: scale(0.43);
+  }
+  .scene{
+    flex-basis: 60%;
+  }
+  .controls{
+    flex-basis: 40%;
+    flex-direction: column;
+  }
+  .controls div:not(:last-child){
+    width: 100%;
+    padding: 4% 5%;
+  }
+  input[type=range]{
+    padding: 4% 0%;
+  }
+  .controls div:last-child{
+    margin: 4% 5%;
+    width: 100%;
+    padding: 0% 5%;
+  }
+}
