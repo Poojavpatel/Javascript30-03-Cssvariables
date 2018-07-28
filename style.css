@@ -39,7 +39,7 @@ img{
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 0% 7%;
+    padding: 0% 5%;
 }
 .object{
   background: transparent;
@@ -77,6 +77,38 @@ input{
 label{
   display: block;
 }
-.controls div{
+.controls div:not(:last-child){
   flex-grow: 1;
+  margin: 0 3%;
 }
+.controls div:last-child{
+  margin: 0 5%;
+  padding-bottom: 1.5%;
+}
+input[type=range]{
+  margin: 0;
+  width: 100%;
+  padding: 9% 0%;
+  background: transparent;
+}
+input[type=color]{
+    padding: 0;
+    border: none;
+    cursor: pointer; 
+    margin: 6% 0%;
+    width: 100%;
+}
+::-webkit-color-swatch {
+  border: none;
+}
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+::-moz-color-swatch,
+::-moz-focus-inner {
+    border: none;
+}
+::-moz-focus-inner {
+    padding: 0;
+}
+
