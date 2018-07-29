@@ -7,10 +7,10 @@ function handleUpdate() {
     const suffix = this.dataset.sizing || '' ;
     console.log(suffix);
     //console.log(this.name);
-    //console.log(this.value);
-    //console.log(this.value + suffix);
-    document.documentElement.style.setProperty(` --${this.name} ` , this.value+suffix );
-}
+    var foo = this.value + suffix;
+    console.log("foo:" + foo);
+    document.documentElement.style.setProperty(`--${this.name}`,foo);
+}   
 
 inputs.forEach(input => {
     input.addEventListener('change' , handleUpdate);
